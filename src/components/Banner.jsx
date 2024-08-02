@@ -38,7 +38,7 @@ const Banner = () => {
         <SwiperSlide key={imagem.id}>
           <div className="h-96 w-full  bg-cover bg-center z-8" style={{ backgroundImage: `url('/src/assets/images/banner/${imagem.imagem}')` }}>
                 <div className={`h-full w-full bg-black/80 `}>
-                    <div className='h-full flex flex-col items-end justify-start sm:justify-center sm:items-center'>
+                    <div className='h-full flex flex-col justify-end  items-center sm:justify-center sm:items-center'>
                         <p className='text-xl sm:text-3xl text-white bg-black/20 p-2'>{imagem.texto}</p>
                     </div>
              </div>
