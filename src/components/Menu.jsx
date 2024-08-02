@@ -37,7 +37,7 @@ const Menu = () => {
                   <button className="flex justify-end" onClick={()=>{setIsOpen(false)}}><IoCloseSharp  className='w-10 h-10 mb-5' /></button>   
        
               ): (
-                <button className="flex justify-end" onClick={()=>{setIsOpen(true)}}><GiHamburgerMenu  className='w-5 h-5' /></button>
+                <button className="flex justify-end items-center mr-5" onClick={()=>{setIsOpen(true)}}><GiHamburgerMenu  className='w-10 h-10' /></button>
               )
                }
             <div className={`${isOpen ? ("h-screen") : ("h-0")} bg-primary w-full transition-all  duration-500 overflow-hidden`}>
