@@ -22,7 +22,7 @@ const Banner = () => {
   return (
     <div className='relative h-84 '>
       <div className='flex flex-col absolute opacity-100 z-10 justify-start items-start'>
-          <img className='animate-fadeLogo w-64 h-56 ml-5 ' src={logo} alt="logo" />
+          <img className='animate-fadeLogo w-56 h-48 lg:w-64 lg:h-56 ml-5 ' src={logo} alt="logo" />
       </div>
     <Swiper
     slidesPerView={1}
