@@ -16,7 +16,7 @@ const Banner = () => {
     {id:2, imagem:"2.jpg", texto:"Contamos com um espaço fechado para maior lazer"},
     {id:3, imagem:"3.jpg", texto:"Realizamos festas empresariais"},
     {id:4, imagem:"4.jpg", texto:"Contamos com fut-fralda para os pequenos"},
-    {id:5, imagem:"5.jpg", texto:"Temos Fut-aniversário aos domingos"}
+    {id:5, imagem:"5.jpg", texto:"Temos Fut-aniversários aos domingos"}
 
   ]);
   return (
@@ -36,7 +36,7 @@ const Banner = () => {
       
       {imagens.map((imagem)=>(
         <SwiperSlide key={imagem.id}>
-          <div className="h-96 w-full  bg-cover bg-center z-8" style={{ backgroundImage: `url('./../../src/assets/images/banner/${imagem.imagem}')` }}>
+          <div className="h-96 w-full  bg-cover bg-center z-8" style={{ backgroundImage: `url('./../src/assets/images/banner/${imagem.imagem}')` }}>
                 <div className={`h-full w-full bg-black/80 `}>
                     <div className='h-full flex flex-col justify-end  items-center sm:justify-center sm:items-center'>
                         <p className='text-xl sm:text-3xl text-white bg-black/20 p-2'>{imagem.texto}</p>
