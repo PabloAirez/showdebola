@@ -1,19 +1,52 @@
-import React from 'react'
-import logo from "../../public/logo.png"
-import futebol from "./../assets/images/foot.jpg"
+import {useState} from 'react'
+import logo from "../../public/logo2.png"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore from 'swiper';
+import { Autoplay } from 'swiper/modules';
+
+
 
 const Banner = () => {
+
+  SwiperCore.use([Autoplay]);
+
+
+  const [imagens,setImagens] = useState([
+    {id:1, imagem:"1.jpg", texto:"Bora jogar e se divertir?"},
+    {id:2, imagem:"2.jpg", texto:"Contamos com um espaço fechado para maior lazer"},
+    {id:3, imagem:"3.jpg", texto:"Realizamos festas empresariais"},
+    {id:4, imagem:"4.jpg", texto:"Contamos com fut-fralda para os pequenos"},
+    {id:5, imagem:"5.jpg", texto:"Temos Fut-aniversário aos domingos"}
+
+  ]);
   return (
-    <div className={'h-84 w-full bg-cover bg-center bg-[url("/src/assets/images/foot.jpg")]'}>
-        <div className={`h-full w-full bg-secondary/50`}>
-        
-            <div className='flex flex-col justify-center items-center'>
-                <img className=' w-96 h-72 ' src={logo} alt="logo" />
-                <p className='text-white text-center'>Futebol society Charqueadas</p>
-            </div>
+    <div className='relative h-84 '>
+      <div className='flex flex-col absolute opacity-100 z-10 justify-start items-start'>
+          <img className='animate-fadeLogo w-64 h-56 ml-5 ' src={logo} alt="logo" />
+      </div>
+    <Swiper
+    slidesPerView={1}
+    autoplay={{
+      delay: 6000,
+      disableOnInteraction: false,
+    }}
+    loop={true}
+    >
+      
+      
+      {imagens.map((imagem)=>(
+        <SwiperSlide key={imagem.id}>
+          <div className="h-96 w-full  bg-cover bg-center z-8" style={{ backgroundImage: `url('/src/assets/images/banner/${imagem.imagem}')` }}>
+                <div className={`h-full w-full bg-black/80 `}>
+                    <div className='h-screen flex flex-col justify-center items-center'>
+                        <p className='text-3xl text-white bg-black/20 p-2'>{imagem.texto}</p>
+                    </div>
+             </div>
 
         </div>
-
+        </SwiperSlide>
+      ))}
+    </Swiper>
     </div>
   )
 }
