@@ -6,6 +6,7 @@ import { Autoplay } from 'swiper/modules';
 
 
 
+
 const Banner = () => {
 
   SwiperCore.use([Autoplay]);
