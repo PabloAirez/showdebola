@@ -1,9 +1,9 @@
 import {useEffect, useRef,useState} from 'react'
 
-const Sobrenos = () => {
+
+const Sobrenos = ({divRef}) => {
 
     const [visible, setVisible] = useState(false);
-  const targetRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
@@ -17,7 +17,7 @@ const Sobrenos = () => {
       });
     });
 
-    const target = targetRef.current;
+    const target = divRef.current;
     if (target) {
       observer.observe(target);
     }
@@ -31,7 +31,7 @@ const Sobrenos = () => {
     
 
   return (
-    <div ref={targetRef} className='mt-20'>
+    <div ref={divRef} className='mt-20'>
     {
         visible && (
             <div className={`flex lg:flex-row flex-col m-20 p-5 animate-fadeLogo bg-bgCard rounded-2xl shadow-2xl`}>

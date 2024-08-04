@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useRef} from 'react'
 import logo from "../../public/logo1.png"
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
@@ -6,12 +6,13 @@ import { IoCloseSharp } from "react-icons/io5";
 
 
 
-const Menu = () => {
+const Menu = ({refs}) => {
 
   const [isMobile, setIsMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
+   
     const handleResize = () => {
       window.innerWidth < 700 ? setIsMobile(true) : setIsMobile(false);
 
@@ -23,6 +24,14 @@ const Menu = () => {
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  const scrollToDiv = (target) => {
+    setIsOpen(false);
+    target.current.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+      window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+    }, 500)
+  };
 
 
   
@@ -43,7 +52,7 @@ const Menu = () => {
             <div className={`${isOpen ? ("h-screen") : ("h-0")} bg-primary w-full transition-all  duration-500 overflow-hidden`}>
               <ul className='flex flex-col w-full mt-30'>
                   <li className='p-3 hover:bg-primary-hover duration-300 w-full text-center'>Página inicial</li>
-                  <li className='p-3 hover:bg-primary-hover duration-300 w-full text-center'>Sobre Nós</li>
+                  <button  onClick={()=>{scrollToDiv(refs.sobrenos)}}><li  className='p-3 hover:bg-primary-hover duration-300 w-full text-center'> Sobre Nós</li></button>
                   <li className='p-3 hover:bg-primary-hover duration-300 w-full text-center'>Agende o seu jogo</li>
                 </ul>
             </div>
@@ -52,7 +61,7 @@ const Menu = () => {
             ) : (
               <ul className='flex flex-row justify-between'>
                 <li className='p-3 hover:bg-primary-hover duration-300'>Página inicial</li>
-                <li className='p-3 hover:bg-primary-hover duration-300'>Sobre Nós</li>
+                <button  onClick={()=>{scrollToDiv(refs.sobrenos)}}><li  className='p-3 hover:bg-primary-hover duration-300 w-full text-center'> Sobre Nós</li></button>
                 <li className='p-3 hover:bg-primary-hover duration-300'>Agende o seu jogo</li>
               </ul>
             )

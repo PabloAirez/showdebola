@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import './App.css'
 import Menu from './components/Menu'
 import Banner from './components/Banner'
@@ -7,6 +7,8 @@ import Sobrenos from './components/Sobrenos';
 function App() {
 
   const [loading,setLoading] = useState(true);
+  const sobrenosRef = useRef(null);
+
 
 
   useEffect(() => {
@@ -23,9 +25,9 @@ function App() {
         <Loading></Loading>
       ): (
       <>  
-      <Menu></Menu>
+      <Menu refs={{sobrenos:sobrenosRef}}></Menu>
       <Banner></Banner>
-      <Sobrenos></Sobrenos>
+      <Sobrenos divRef={sobrenosRef}></Sobrenos>
       </>
       )
       
