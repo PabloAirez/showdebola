@@ -21,7 +21,7 @@ const Banner = () => {
 
   ]);
   return (
-    <div className='relative h-84 '>
+    <div className='relative h-screen '>
       <div className='flex flex-col absolute opacity-100 z-10 justify-start items-start'>
           <img className='animate-fadeLogo w-56 h-48 lg:w-64 lg:h-56 ml-5 ' src={logo} alt="logo" />
       </div>
@@ -37,10 +37,10 @@ const Banner = () => {
       
       {imagens.map((imagem)=>(
         <SwiperSlide key={imagem.id}>
-          <div className="h-96 w-full  bg-cover bg-center z-8" style={{ backgroundImage: `url('/banner/${imagem.imagem}')` }}>
+          <div className="h-screen w-full  bg-cover bg-center z-8" style={{ backgroundImage: `url('/banner/${imagem.imagem}')` }}>
                 <div className={`h-full w-full bg-black/80 `}>
-                    <div className='h-full flex flex-col justify-end  items-center sm:justify-center sm:items-center'>
-                        <p className='text-xl sm:text-3xl text-white bg-black/20 p-2'>{imagem.texto}</p>
+                    <div className='h-full flex flex-col justify-center items-center'>
+                        <p className='text-2xl sm:text-3xl text-white bg-black/20 p-2'>{imagem.texto}</p>
                     </div>
              </div>
 

@@ -28,7 +28,7 @@ const Menu = () => {
   
   return (
     <div className='flex justify-around text-white bg-primary w-full'>
-        {!isOpen && <img className='w-56 lg:w-64 h-10' src="/logo1.png" alt="" />}
+        {!isOpen && <img className='hidden sm:block w-56 lg:w-64 h-10' src="/logo1.png" alt="" />}
         {
             isMobile ? (
               <div className='flex flex-col w-full'>

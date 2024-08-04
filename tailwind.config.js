@@ -15,6 +15,9 @@ export default {
           DEFAULT: '#4d7094'
 
         },
+        bgCard:{
+          DEFAULT: "#f3fcf5f5"
+        }
       },
       height: {
         '72': '18rem', 
