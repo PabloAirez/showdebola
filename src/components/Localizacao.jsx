@@ -6,7 +6,7 @@ const Localizacao = () => {
       <h2 className='text-xl mb-5 pt-10 text-center'>Localização</h2> 
       <p className='text-lg text-center'>Nossa quadra está localizada na R. Silmar Berbiger, 341 - Sul América, Charqueadas - RS</p>
       <p className='text-lg text-center mb-5'>Em frente à padaria Yung</p>
-      <iframe className='' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13825.234720584418!2d-51.62881171564351!3d-29.97055769016695!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951bc17d489f9cdf%3A0xf32052525ccdaa93!2sShow%20de%20Bola!5e0!3m2!1spt-BR!2sbr!4v1722874203236!5m2!1spt-BR!2sbr" width="500" height="400"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+      <iframe className='w-full h-full' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13825.234720584418!2d-51.62881171564351!3d-29.97055769016695!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951bc17d489f9cdf%3A0xf32052525ccdaa93!2sShow%20de%20Bola!5e0!3m2!1spt-BR!2sbr!4v1722874203236!5m2!1spt-BR!2sbr"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 
     </div>
   )
