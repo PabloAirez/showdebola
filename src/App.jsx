@@ -1,15 +1,14 @@
 import { useState, useEffect, useRef } from 'react'
 import './App.css'
-import Menu from './components/Menu'
-import Banner from './components/Banner'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Loading from './components/Loading';
-import Sobrenos from './components/Sobrenos';
-import Galeria from './components/Galeria';
+import ThemeBase from './pages/ThemeBase';
+import Home from './pages/Home';
+
 function App() {
 
   const [loading,setLoading] = useState(true);
   const sobrenosRef = useRef(null);
-  const galeriaRef = useRef(null);
 
 
 
@@ -26,11 +25,15 @@ function App() {
       loading ? (
         <Loading></Loading>
       ): (
-      <>  
-      <Menu refs={{sobrenos:sobrenosRef}}></Menu>
-      <Banner></Banner>
-      <Sobrenos divRef={sobrenosRef}></Sobrenos>
-      <Galeria ></Galeria>
+      <>
+      <BrowserRouter>
+         <Routes>
+            <Route element={<ThemeBase sobrenosRef={sobrenosRef}/>}>
+              <Route path='/' element={<Home sobrenosRef={sobrenosRef} />}></Route>
+            </Route>
+         </Routes>
+      </BrowserRouter>  
+     
       </>
       )
       

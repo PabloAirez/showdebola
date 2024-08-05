@@ -24,7 +24,7 @@ const Banner = () => {
   return (
     <div className='relative h-screen '>
       <div className='flex flex-col absolute opacity-100 z-10 justify-start items-start'>
-          <img className='animate-fadeIn w-56 h-48 lg:w-64 lg:h-56 ml-5 ' src={logo} alt="logo" />
+          <img className='animate-fadeIn w-56 h-48 lg:w-64 lg:h-56 ml-5 mt-5 ' src={logo} alt="logo" />
       </div>
     <Swiper
     style={{

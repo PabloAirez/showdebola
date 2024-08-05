@@ -2,6 +2,7 @@ import {useState, useEffect, useRef} from 'react'
 import logo from "../../public/logo1.png"
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 
 
@@ -49,7 +50,7 @@ const Menu = ({refs}) => {
                }
             <div className={`${isOpen ? ("h-screen") : ("h-0")} bg-primary w-full transition-all  duration-500 overflow-hidden`}>
               <ul className='flex flex-col w-full mt-30'>
-                  <li className='p-3 hover:bg-primary-hover duration-300 w-full text-center'>Página inicial</li>
+                  <Link to={"/"}> <button ><li className='p-3 hover:bg-primary-hover duration-300 w-full text-center'>Página inicial</li></button></Link>
                   <button  onClick={()=>{scrollToDiv(refs.sobrenos)}}><li  className='p-3 hover:bg-primary-hover duration-300 w-full text-center'> Sobre Nós</li></button>
                   <li className='p-3 hover:bg-primary-hover duration-300 w-full text-center'>Agende o seu jogo</li>
                 </ul>
