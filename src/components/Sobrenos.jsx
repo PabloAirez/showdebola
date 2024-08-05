@@ -34,7 +34,7 @@ const Sobrenos = ({divRef}) => {
     <div ref={divRef} className='mt-20'>
     {
         visible && (
-            <div className={`flex lg:flex-row flex-col m-20 p-5 animate-fadeLogo bg-bgCard rounded-2xl shadow-2xl`}>
+            <div className={`flex lg:flex-row flex-col sm:m-20 p-5 animate-fadeLogo bg-bgCard rounded-2xl shadow-2xl`}>
                 <div className='flex flex-col'>
                     <img className='rounded-lg' src='/banner/2.jpg'></img>
                 </div>
