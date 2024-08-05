@@ -28,15 +28,13 @@ const Menu = ({refs}) => {
   const scrollToDiv = (target) => {
     setIsOpen(false);
     target.current.scrollIntoView({ behavior: 'smooth' });
-    setTimeout(() => {
-      window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
-    }, 500)
+    
   };
 
 
   
   return (
-    <div className='flex justify-around text-white bg-primary w-full'>
+    <div className='flex justify-around text-white bg-primary w-full fixed z-20'>
         {!isOpen && <img className='hidden sm:block w-56 lg:w-64 h-10' src="/logo1.png" alt="" />}
         {
             isMobile ? (

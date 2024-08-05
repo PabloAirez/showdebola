@@ -26,7 +26,7 @@ export default {
         '100': '3-rem'
       },
       keyframes: {
-        fadeLogo: {
+        fadeIn: {
           '0%': {
             opacity: 0,
             transform: 'translateY(-20px)',
@@ -38,7 +38,7 @@ export default {
         },
       },
       animation: {
-        fadeLogo: 'fadeLogo 1s ease-in-out',
+        fadeIn: 'fadeIn 1s ease-in-out',
       },
     },
   },
