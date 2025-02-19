@@ -61,7 +61,7 @@ const Menu = ({refs}) => {
               <ul className='flex flex-row justify-between'>
                 <li className='p-3 hover:bg-primary-hover duration-300'>Página inicial</li>
                 <button  onClick={()=>{scrollToDiv(refs.sobrenos)}}><li  className='p-3 hover:bg-primary-hover duration-300 w-full text-center'> Sobre Nós</li></button>
-                <li className='p-3 hover:bg-primary-hover duration-300'>Agende o seu jogo</li>
+                <li className='p-3 hover:bg-primary-hover duration-300'><a href='https://wa.me/5551980184007' target='_blank'>Agende o seu jogo</a></li>
               </ul>
             )
         }
