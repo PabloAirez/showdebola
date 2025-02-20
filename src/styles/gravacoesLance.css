@@ -1,0 +1,101 @@
+.gravacoes-container {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gravacoes-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  display: flex;
+  max-width: 1000px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.gravacoes-card:hover {
+  transform: translateY(-5px);
+}
+
+.imagem-container {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+}
+
+.gravacao-imagem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.conteudo-container {
+  flex: 1.5;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.conteudo-container h2 {
+  color: #1a1a1a;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.descricao {
+  color: #4a4a4a;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.passos-lista {
+  padding-left: 1.5rem;
+  counter-reset: steps;
+}
+
+.passos-lista li {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1rem;
+  line-height: 1.4;
+}
+
+.passos-lista li::before {
+  counter-increment: steps;
+  content: counter(steps);
+  position: absolute;
+  left: -2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #3498db;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .gravacoes-card {
+    flex-direction: column;
+  }
+  
+  .imagem-container {
+    min-height: 250px;
+  }
+  
+  .conteudo-container {
+    padding: 1.5rem;
+  }
+  
+  .conteudo-container h2 {
+    font-size: 2rem;
+  }
+}

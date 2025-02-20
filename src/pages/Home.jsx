@@ -4,6 +4,7 @@ import Sobrenos from './../components/Sobrenos';
 import Galeria from './../components/Galeria';
 import Localizacao from './../components/Localizacao';
 import Rodape from './../components/Rodape';
+import GravacoesLance from './../components/gravacoesLance';
 
 const Home = ({sobrenosRef}) => {
     
@@ -12,6 +13,7 @@ const Home = ({sobrenosRef}) => {
        
       <Banner></Banner>
       <Sobrenos divRef={sobrenosRef}></Sobrenos>
+      <GravacoesLance></GravacoesLance>
       <Galeria ></Galeria>
       <Localizacao></Localizacao>
       <Rodape></Rodape>

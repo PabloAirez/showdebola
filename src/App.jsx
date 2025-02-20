@@ -5,6 +5,7 @@ import Loading from './components/Loading';
 import ThemeBase from './pages/ThemeBase';
 import Home from './pages/Home';
 import BotaoWhatsapp from './components/botaoWhatsapp';
+import GravacoesLance from './components/gravacoesLance';
 
 function App() {
 
